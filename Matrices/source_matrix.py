@@ -6,7 +6,7 @@ Created: 4/18/2017
 
 import numpy as np
 
-def source_time(S_net, theta, rho, cp, dt):
+def source_time(S_net, phi, rho, cp, dt):
     """ source matrix for unsteady problem using Implicit Euler
     Q_pt = Q_p + rho*Cp*T_p / dt
 
@@ -17,6 +17,6 @@ def source_time(S_net, theta, rho, cp, dt):
 
     factor = rho*cp/dt
 
-    Source_time = np.add(S_net, np.multiply(factor, theta))
+    Source_time = np.add(S_net, np.multiply(factor, phi))
 
     return Source_time

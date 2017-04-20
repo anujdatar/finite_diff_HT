@@ -5,6 +5,9 @@ Created: 4/15/2017
 """
 
 import numpy as np
+import matplotlib
+matplotlib.use('Agg') # enables backend/headless plotting
+## Can use GTK or GTKAgg - but need Gtk package
 import matplotlib.pyplot as plt
 
 from Toolpaths import path_select
